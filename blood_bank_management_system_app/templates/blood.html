@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <link rel="icon" href="{% static 'image/tablogo.png' %}">
+  <title>Rakthdhan Donor Zone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content= "width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <script type="text/javascript" src="/jquery/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/css.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Style.css'%}">
+  <script src="https://kit.fontawesome.com/9329adc263.js" crossorigin="anonymous"></script>
+  <script src="{% static 'js/redirection.js' %}"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<style>
+.bgimg {
+    background-image: url("{% static 'image/imagee.png' %}");
+    background-color:#961e1b;
+}
+</style>
+</head>
+
+
+
+
+
+
+
+<body>
+<img src="{% static 'image/bloodbanner.png' %}" align="center" width="100%">
+<hr class="new1" >
+<button class="tablink" onclick="openPage('Home', this)" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this)" >Donate Blood</button>
+<button class="tablink" onclick="openPage('Contact', this)">Collect Blood</button>
+<button class="tablink" onclick="openPage('About', this)">About</button>
+<marquee id="scrolling" behavior="scroll" scrollAmount="10" direction="left" onmouseover="this.stop();" onmouseout="this.start();">Blood is essential to help patients survive surgeries, cancer treatment, chronic illnesses, and traumatic injuries. This lifesaving care starts with one person making a generous donation. The need for blood is constant. But only about 3% of age-eligible people donate blood yearly. So start donating blood.</marquee>
+{% for msg in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Thanks for Donating!!</strong> {{ msg }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+{% endfor %}
+
+<!--HOME TAB-->
+
+<div id="Home" class="tabcontent" style="width: 100%;">
+ <span class="tag">Home</span>
+<br>
+<br>
+  
+  &nbsp &nbsp &nbsp&nbsp <img src="{% static 'image/image.png' %}" class="algn" height="250">&nbsp&nbsp
+  <img src="{% static 'image/Donate-Blood.jpg' %}" height="250">
+<br><br><br><br>
+<h2 align="center" class="fonts"><u> LEARN ABOUT DONATION </u></h2> 
+<br><br>
+<h2 style="font-size: 24.0px; font-weight: 600;color: #d1001c;  ">Why is it Important to Donate Blood?</h2>
+<p>About 328 million people currently live in the U.S. Each year, approximately 6.8 million people in the U.S donate blood. Annually, this adds up to about 13.6 million units of whole blood collected for donation in the U.S. The Red Cross provides about 40% of our nation’s blood and blood cell components to donors. Your blood donations are used for patients in need of surgery, cancer treatment and transfusions for blood loss from traumatic injuries. </p>
+<br>
+<h2 style="font-size: 24.0px; font-weight: 600;color: #d1001c;  ">Blood Donation Types</h2>
+<p>
+  Blood donations can yield a variety of blood products, including red cells, platelets and plasma. You may be most familiar with the typical whole blood donation drive seen at workplaces, schools and community events, but there are a few other ways to help give more life through the Red Cross.
+</p><br>
+<h2 style="font-size: 24.0px; font-weight: 600;color: #d1001c;  ">The Importance of Diversity in the Blood Supply</h2>
+<p>Maintaining diversity in the blood supply is essential. Some blood types are quite rare and are likeliest to be found among people with shared ancestral origins.</p><br>
+<h2 style="font-size: 24.0px; font-weight: 600;color: #d1001c;  ">The historical importance of World Blood Donor Day </h2>
+<p>In the year 2004, the first World Blood Donor Day was observed by WHO. It was declared to be an annual global event at the 58th World Health Assembly in 2005. The day was celebrated to be the birth anniversary of Austrian biologist and physician Karl Landsteiner. They are the founders of modern blood transfusion. </p>
+
+
+<table class="table table-bordered ">
+<tbody>
+<tr>
+<th colspan="3" style="color:white;background-color:#d1001c;">Compatible Blood Type Donors</th>
+</tr>
+<tr>
+<td><b>Blood Type</b></td>
+<td><b>Donate Blood To</b></td>
+<td><b>Receive Blood From</b></td>
+</tr>
+<tr>
+<td><span style="color: #961e1b;"><b>A+</b></span></td>
+<td>A+ AB+</td>
+<td>A+ A- O+ O-</td>
+</tr>
+<tr>
+<td><span style="color: #961e1b;"><b>O+</b></span></td>
+<td>O+ A+ B+ AB+</td>
+<td>O+ O-</td>
+</tr>
+<tr>
+<td><span style="color: #961e1b;"><b>B+</b></span></td>
+<td>B+ AB+</td>
+<td>B+ B- O+ O-</td>
+</tr>
+<tr>
+<td><span style="color: #961e1b;"><b>AB+</b></span></td>
+<td>AB+</td>
+<td>Everyone</td>
+</tr>
+<tr>
+<td><span style="color: #961e1b;"><b>A-</b></span></td>
+<td>A+ A- AB+ AB-</td>
+<td>A- O-</td>
+</tr>
+<tr>
+<td><span style="color: #961e1b;"><b>O-</b></span></td>
+<td>Everyone</td>
+<td>O-</td>
+</tr>
+<tr>
+<td><span style="color: #961e1b;"><b>B-</b></span></td>
+<td>B+ B- AB+ AB-</td>
+<td>B- O-</td>
+</tr>
+<tr>
+<td><span style="color: #961e1b;"><b>AB-</b></span></td>
+<td>AB+ AB-</td>
+<td>AB- A- B- O-</td>
+</tr>
+</tbody>
+</table>
+<br><br>
+<h2 style="font-size: 24.0px; font-weight: 600;color: #d1001c;  ">Blood donation is beneficial.</h2>
+<p>It is important to donate blood to save lives. The donation of blood has been beneficial for your emotional and physical health. It helps in the following ways;&nbsp;</p>
+
+<ul><li>It reduces stress.</li><li>It improves your emotional well-being.</li><li>It helps to get rid of negative feelings.&nbsp;</li><li>It provides a sense of belonging and reduces isolation factors.</li><li>It helps in burning your calories.</li><li>It helps in improving physical health.&nbsp;</li><li>It helps to reduce free radical damage in the body, which is the main cause of Cancer.&nbsp;</li><li>You will enjoy a free screening of your blood where the presence of Syphilis, Hepatitis B, Hepatitis C and HIV is measured.</li></ul>
+<p>There is evidence that is collected from ample research to see if the donor is benefitted from blood giving or not.&nbsp;&nbsp;</p>
+
+<br><br><br>
+<!-- Site footer -->
+    <div class="site-footer" style="width: 100%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Blood is essential to help patients survive surgeries, cancer treatment, chronic illnesses, and traumatic injuries. This lifesaving care starts with one person making a generous donation. The need for blood is constant. But only about 3% of age-eligible people donate blood yearly. So start donating blood.</p>
+          </div>
+
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li class="click" onclick="openPage('Home', this)" style="cursor: pointer; ">Home</li>
+              <li class="click" onclick="openPage('News', this)" style="cursor: pointer; ">Donate Blood</li>
+              <li class="click" onclick="openPage('Contact', this)" style="cursor: pointer; ">Collect Blood</li>
+              <li class="click" onclick="openPage('About', this)" style="cursor: pointer; ">About</li>
+             
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">A Web Project Developed by students of 
+         <a href="https://pscmr.ac.in/">PSCMR COLLEGE OF ENGINEERING AND TECHNOLOGY</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/pscmr.ac.in/"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="https://twitter.com/pscmr?lang=en"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/accounts/login/?next=/pscmrcet/"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="https://in.linkedin.com/company/pscmr-college-of-engineering-&-tech."><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+</div>
+</div>
+
+<!--HOME TAB END-->
+
+<!--DONATE TAB-->
+
+<div id="News" class="tabcontent" style="width: 100%;">
+   <span class="tag">Donate Here</span>
+ <!-- <script src="{% static 'js/sc.js' %}" type="text/javascript"></script> -->
+<div class="container">
+
+    <form class="mt32" method="POST" name="donateform" id="form1">
+    
+        {% csrf_token %}
+
+        <div class="form-group row">
+            <label for="fname" class="control-label col-sm-2">First Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="FName" placeholder="First name" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="lname" class="control-label col-sm-2">Last Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control"  name="LName" placeholder="Last name" required>
+            </div>
+        </div>
+
+         <div class="form-group row">
+            <label for="roll" class="control-label col-sm-2">Age</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control"  name="age" placeholder="Your Age" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2">Gender</label>
+            <div class="col-sm-10">
+              <select id="gender" name="gender" class="form-control" required>
+                <option disabled selected value> -- Select your Gender -- </option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+        </div>
+        </div> 
+        
+        <div class="form-group row">
+            <label for="phn" class="control-label col-sm-2">Mobile</label>
+            <div class="col-sm-10">
+             <input type="text"  minlength="10" maxlength="10" class="form-control" name="Mobile" pattern="[0-9]{10}" placeholder="Your Mobile Number" required>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="email" class="control-label col-sm-2">Email</label>
+            <div class="col-sm-10">
+             <input type="email" class="form-control" name="Email" placeholder="Your email" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="blood" class="control-label col-sm-2">Blood</label>
+            <div class="col-sm-10">
+            
+            <select id="group" name="group" class="form-control" required>
+              <option disabled selected value> -- Select Blood Group -- </option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10 pull-right">
+                <button type="submit" class="btn btn-danger">Donate</button>
+
+                <button type="reset" value="reset" class="btn btn-danger">Reset</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<br><br><br>
+ <!-- Site footer -->
+    <div class="site-footer" style="width: 100%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Blood is essential to help patients survive surgeries, cancer treatment, chronic illnesses, and traumatic injuries. This lifesaving care starts with one person making a generous donation. The need for blood is constant. But only about 3% of age-eligible people donate blood yearly. So start donating blood.</p>
+          </div>
+
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li class="click" onclick="openPage('Home', this)" style="cursor: pointer; ">Home</li>
+              <li class="click" onclick="openPage('News', this)" style="cursor: pointer; ">Donate Blood</li>
+              <li class="click" onclick="openPage('Contact', this)" style="cursor: pointer; ">Collect Blood</li>
+              <li class="click" onclick="openPage('About', this)" style="cursor: pointer; ">About</li>
+             
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">A Web Project Developed by students of 
+         <a href="https://pscmr.ac.in/">PSCMR COLLEGE OF ENGINEERING AND TECHNOLOGY</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/pscmr.ac.in/"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="https://twitter.com/pscmr?lang=en"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/accounts/login/?next=/pscmrcet/"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="https://in.linkedin.com/company/pscmr-college-of-engineering-&-tech."><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+                               
+</div>
+
+<!--DONATE TAB END-->
+
+<!--COLLECT BLOOD TAB-->
+
+<div id="Contact" class="tabcontent">
+ 
+   <span class="tag">Collect Blood</span>
+  <form method="POST" action="#">
+    <select name="filters" id="filters" onclick="filtering()">
+      <option disabled selected value> -- Select Blood Group --</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+      <option value="all">Display all data</option>
+    </select>
+    <br>
+    <br>
+    <table class="table table-bordered" id="myTable">
+      <thead align="center" >
+        <tr id="tb">
+          <th scope="col">S.no</th>
+          <th scope="col">Fname</th>
+          <th scope="col">Lname</th>
+          <th scope="col">Age</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Email</th>
+          <!-- <th scope="col">Password</th> -->
+          <th scope="col">Mobile</th>
+          <th scope="col">Group</th>
+        </tr>
+      </thead>
+      <tbody class="bg" align="center">
+      {% for f in Details %}
+        <tr>
+          <td>{{forloop.counter}}</td>
+          <td>{{f.Fname}}</td>
+          <td>{{f.Lname}}</td>
+          <td>{{f.age}}</td>
+          <td>{{f.Gender}}</td>
+          <td>{{f.email}}</td>
+          <td>{{f.Mobile}}</td>
+          <td>{{f.group}}</td>
+          <!-- <td class="table-info">{{f.dob}}</td> -->
+          {% comment %} <td>
+            <i class="fa-solid fa-trash-can"></i>
+          </td> {% endcomment %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    </form>
+    <br><br><br>
+ <!-- Site footer -->
+    <div class="site-footer" style="width: 100%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Blood is essential to help patients survive surgeries, cancer treatment, chronic illnesses, and traumatic injuries. This lifesaving care starts with one person making a generous donation. The need for blood is constant. But only about 3% of age-eligible people donate blood yearly. So start donating blood.</p>
+          </div>
+
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li class="click" onclick="openPage('Home', this)" style="cursor: pointer; ">Home</li>
+              <li class="click" onclick="openPage('News', this)" style="cursor: pointer; ">Donate Blood</li>
+              <li class="click" onclick="openPage('Contact', this)" style="cursor: pointer; ">Collect Blood</li>
+              <li class="click" onclick="openPage('About', this)" style="cursor: pointer; ">About</li>
+             
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">A Web Project Developed by students of 
+         <a href="https://pscmr.ac.in/">PSCMR COLLEGE OF ENGINEERING AND TECHNOLOGY</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/pscmr.ac.in/"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="https://twitter.com/pscmr?lang=en"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/accounts/login/?next=/pscmrcet/"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="https://in.linkedin.com/company/pscmr-college-of-engineering-&-tech."><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+
+</div>
+<!--COLLECT TAB END-->
+
+<!--ABOUT US TAB-->
+
+<div id="About" class="tabcontent">
+  <span class="tag">About Us</span>
+  <!--About Code Start-->
+
+ &nbsp &nbsp
+<table>
+<tr>
+  <td>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp</td>
+<td>
+  &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp
+  <img src="{% static 'image/logo.png' %}" class="algn" height="350"></td>
+  <td>&nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp</td>
+<td>
+<div class="inner">
+                                   
+  <h2><b>ABOUT RAKTHDHAN</b></h2>
+  <h3 style="color: #767676;">Rakthdhan</h3>
+  <div class="desc"style="color: #767676;right:20px;width: 550px;">
+
+      Blood is essential to help patients survive surgeries, cancer treatment, chronic illnesses, and traumatic injuries. This lifesaving care starts with one person making a generous donation. The need for blood is constant. But only about 3% of age-eligible people donate blood yearly. So start donating blood.
+  </div>
+  <br>
+
+  <button style="background-color: #d1001c; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 18px;" 
+    onclick="openPage('Home', this)"><b>Visit</b> 
+  </button>
+
+
+
+</div>
+
+</td>
+</tr>
+</table>
+<br>
+<div class="bgimg">
+  <br>
+<h1 style="color:white; font-family: 'Nunito Sans;" align="center"><b>Our Team</b></h1>
+<br>
+<table id="about-table" align="center">
+  <tr>
+    <td>
+ <figure class="snip1515">
+  <div class="profile-image"><img src="{% static 'image/harsha.jpg' %}" alt="HarshaSithamraju" /></div>
+  <figcaption>
+    <h3>S.V.N.K.S.SRIHARSHA</h3>
+    <h4>Front-End Developer&DataBases</h4>
+    <p>I used to desging the entire website with the Css,JavaScript in the very attractive manner.</p>
+   <div class="wrapper">
+  
+  
+  <a href="https://instagram.com/__harsha_sithamraju__?igshid=YmMyMTA2M2Y=" class="icon instagram">
+    <div class="tooltip">Instagram</div>
+    <span><img src="{% static 'image/instagramm.png' %}" height="40" width="40" align="center"></span>
+  </a>
+  <a href="https://github.com/HarshaSithamraju" class="icon github">
+    <div class="tooltip">Github</div>
+    <span><img src="{% static 'image/github.png' %}" height="40" width="40" align="center"></span>
+  </a>
+  <a href="https://www.linkedin.com/in/harsha-sithamraju-116980166" class="icon linkedin">
+    <div class="tooltip">Linkedin</div>
+    <span><img src="{% static 'image/linkedin.png' %}" height="40" width="40" align="center"></span>
+  </a>
+</div>
+  </figcaption>
+</figure></td>
+ <td> &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp</td>
+<td>
+<figure class="snip1515">
+  <div class="profile-image"><img src="{% static 'image/pdhanush.jpg' %}" alt="Ponnuri Bhavani Dhanush" /></div>
+  <figcaption>
+    <h3>PONNURI BHAVANI DHANUSH</h3>
+    <h4>Back-End Developer&Hosting</h4>
+    <p>I used to build the bridge between the Front-End to back-End using the Python's Django Framework.</p>
+    <div class="wrapper">
+  
+  
+  <a href="https://instagram.com/dhanush__dhanu__?igshid=YmMyMTA2M2Y=" class="icon instagram">
+    <div class="tooltip">Instagram</div>
+    <span><img src="{% static 'image/instagramm.png' %}" height="40" width="40" align="center"></span>
+  </a>
+  <a href="https://github.com/Ponnuri-Bhavani-Dhanush" class="icon github">
+    <div class="tooltip">Github</div>
+    <span><img src="{% static 'image/github.png' %}" height="40" width="40" align="center"></span>
+  </a>
+  <a href="https://www.linkedin.com/in/bhavani-dhanush-ponnuri-978400195" class="icon linkedin">
+    <div class="tooltip">Linkedin</div>
+    <span><img src="{% static 'image/linkedin.png' %}" height="40" width="40" align="center"></span>
+  </a>
+</div>
+  </figcaption>
+</figure>
+</td>
+</tr>
+</table>
+<br>
+</div>
+<br><br>
+
+ <br><br><br>
+ <!-- Site footer -->
+    <div class="site-footer" style="width: 100%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Blood is essential to help patients survive surgeries, cancer treatment, chronic illnesses, and traumatic injuries. This lifesaving care starts with one person making a generous donation. The need for blood is constant. But only about 3% of age-eligible people donate blood yearly. So start donating blood.</p>
+          </div>
+
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li class="click" onclick="openPage('Home', this)" style="cursor: pointer; ">Home</li>
+              <li class="click" onclick="openPage('News', this)" style="cursor: pointer; ">Donate Blood</li>
+              <li class="click" onclick="openPage('Contact', this)" style="cursor: pointer; ">Collect Blood</li>
+              <li class="click" onclick="openPage('About', this)" style="cursor: pointer; ">About</li>
+             
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">A Web Project Developed by students of 
+         <a href="https://pscmr.ac.in/">PSCMR COLLEGE OF ENGINEERING AND TECHNOLOGY</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/pscmr.ac.in/"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="https://twitter.com/pscmr?lang=en"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/accounts/login/?next=/pscmrcet/"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="https://in.linkedin.com/company/pscmr-college-of-engineering-&-tech."><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+ <!--ABOUT US TAB END--> 
+
+<script type="text/javascript">
+
+  
+
+  function filtering() {
+   var input,table,tr,td,filter,i;
+   input = document.getElementById("filters");
+  //  window.alert(input)
+   filter = input.value;
+  //  window.alert(filter)
+   table = document.getElementById("myTable");
+   tr  = table.getElementsByTagName("tr");
+  //  window.alert(tr.length)
+   for(i=1;i<tr.length;i++){
+     td = tr[i].getElementsByTagName("td")[7];
+    //  window.alert(td);
+     if(td){
+       displaydata = td.innerText;
+      //  window.alert(displaydata.indexOf(filter))
+       if(filter == "all"){
+         tr[i].style.display = "";
+       }
+       else{
+        if(displaydata == filter){
+          tr[i].style.display = "";
+          //window.alert(tr[i].style.display);
+
+        }
+        else{
+          tr[i].style.display = "none";
+        }
+      }
+     }
+   }
+
+  }
+  
+  function redirect(){
+    window.alert("Donated Successfully.....");
+    document.location.reload = '/templates/blood.html';
+  }
+    
+
+
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+
+// Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+
+  $(".hover").mouseleave(
+      function () {
+        $(this).removeClass("hover");
+      }
+    );
+
+</script>
+
+
+
+</body>
+</html> 
+
