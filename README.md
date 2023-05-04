@@ -1,6 +1,5 @@
 # django_blood_bank_management_system
 A Django project on Blood bank management system.
-link: https://rakthdhan.herokuapp.com/
 
 It is a simple blood bank management system project, where user can register and get the info of the blood donors. 
 The admin have the access to manage and manipulate all the data.
